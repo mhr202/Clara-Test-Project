@@ -1,0 +1,16 @@
+<div data-controller = "visualization" data-visualization-id-value = <%=@graph.id%>>
+    <table>
+      <tr>
+        <th>Graph ID</th>
+        <th>Graph Name</th>
+        <th>Nodes</th>
+        <th>Links</th>
+      </tr>
+      <tr>
+        <td><%= @graph.id %></td>
+        <td><%= @graph.name %></td>
+        <td data-visualization-target="nodeCount"></td>
+        <td data-visualization-target="linkCount"></td>
+      </tr>
+    </table>
+</div>
