@@ -5,12 +5,15 @@ class GraphsController < ApplicationController
   end
 
   def show
-    @graph = Graph.find(params[:id])
+    if Graph.exists?(params[:id])
+      @graph = Graph.find(params[:id])
+    else
+      redirect_to graphs_path
+    end
   end
 
   def api
-    puts params[:id]
-    render json: GraphService.perform
+    render json: GraphService.perform(params[:id])
   end
 
 end

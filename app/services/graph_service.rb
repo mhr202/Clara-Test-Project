@@ -1,16 +1,16 @@
-# app/services/rickymorty_service.rb
+# app/services/graph_service.rb
 class GraphService < ApplicationService
   require 'json'
   # require 'rest-client'
 
-  def initialize()
-    @graph = 1
+  def initialize(id)
+    @graph = id
     @payload = {}
   end
 
   def perform
     implement_functionality
-    return @payload.to_json
+    return @payload
   end
 
   private
