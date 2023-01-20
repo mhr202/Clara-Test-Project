@@ -10,6 +10,7 @@ class GraphService < ApplicationService
 
   def perform
     implement_functionality
+    return @payload
   end
 
   private
