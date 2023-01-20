@@ -1,4 +1,6 @@
 <div data-controller = "visualization" data-visualization-id-value = <%=@graph.id%>>
+<div data-visualization-target="preLoader"> Loading.........</div>
+<div data-visualization-target="isLoaded"> 
     <table>
       <tr>
         <th>Graph ID</th>
@@ -13,4 +15,5 @@
         <td data-visualization-target="linkCount"></td>
       </tr>
     </table>
+</div>
 </div>
