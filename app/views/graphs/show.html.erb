@@ -18,6 +18,12 @@
         <h1>Links <br><br> <b data-visualization-target="linkCount"><%= @graph.id %></b></h1>
       </div>          
     </div>
+    <div>
+      <br><br><br>
+      <br><br><br>
+      <%= link_to 'View Payload', api_v1_graph_path(@graph.id), class: 'glow-on-hover' %>
+    </div>
   </div>
+  <!-- TODO - Visualization of Graph Nodes linking with each other -->
  </div>
 </div>

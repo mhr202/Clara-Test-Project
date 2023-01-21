@@ -1,7 +1,6 @@
 # app/services/graph_service.rb
 class GraphService < ApplicationService
   require 'json'
-  # require 'rest-client'
 
   def initialize(id)
     @graph = id
@@ -9,15 +8,15 @@ class GraphService < ApplicationService
   end
 
   def perform
-    implement_functionality
-    return @payload
+    json_payload
   end
 
   private
 
-  def implement_functionality
+  def json_payload
     get_graph_data
     generate_payload
+    JSON.pretty_generate(@payload)
   end
 
   def get_graph_data

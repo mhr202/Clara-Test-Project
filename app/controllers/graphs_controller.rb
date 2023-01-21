@@ -11,9 +11,5 @@ class GraphsController < ApplicationController
       redirect_to graphs_path
     end
   end
-
-  def api
-    render json: GraphService.perform(params[:id])
-  end
-
+  
 end
