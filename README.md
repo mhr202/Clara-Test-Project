@@ -1,4 +1,4 @@
-# Tagging API
+# ClaraFinds Test Project
 
 ## Local Development (Mac OS / Ubuntu)
 
