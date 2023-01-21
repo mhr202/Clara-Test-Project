@@ -37,7 +37,7 @@ class GraphService < ApplicationService
   end
 
   def adjacent_nodes(node)
-    (node.incoming_links.map { |incoming| incoming.id } + node.outgoing_links.map { |incoming| incoming.id }).uniq
+    (node.target_nodes.map { |target| target.id } + node.source_nodes.map { |source| source.id }).uniq
   end
 
   def links_to_json()

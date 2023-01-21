@@ -47,7 +47,7 @@ group :development, :test do
   gem "debug", "~> 1.7", platforms: %i[mri mingw x64_mingw]
   gem "standard", "~> 1.21"
   gem "rspec-rails", "~> 6.0"
-  gem 'rails-controller-testing'
+  gem 'shoulda-matchers', '~> 5.0'
   gem "factory_bot_rails", "~> 6.2"
   gem "faker", "~> 3.1"
 end
