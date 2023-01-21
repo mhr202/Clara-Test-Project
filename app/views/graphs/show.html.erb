@@ -1,0 +1,45 @@
+<style>
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  position: fixed;
+  left: 45%;
+  top: 40%;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+<div data-controller = "visualization" data-visualization-id-value = <%=@graph.id%>>
+<div data-visualization-target="preLoader">
+<div class="loader"></div>
+</div>
+<div data-visualization-target="isLoaded"> 
+  <div class='container' style='text-align: center; margin-top : 15%'>
+    <div class='row'>
+      <div class='col-4'>
+        <h1>ID <br><br> <b><%= @graph.id %></b></h1>
+      </div>
+      <div class='col-4'>
+        <h1>Nodes <br><br> <b data-visualization-target="nodeCount"><%= @graph.id %></b></h1>
+      </div>
+      <div class='col-4'>
+        <h1>Links <br><br> <b data-visualization-target="linkCount"><%= @graph.id %></b></h1>
+      </div>          
+    </div>
+  </div>
+ </div>
+</div>
