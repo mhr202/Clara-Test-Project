@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
   resources :graphs,  only: [:index, :show]
-  get "/api/graph/:id", to: "graphs#api"
+
+  namespace :api do
+    namespace :v1 do
+      #TODO - Create complete API & RESTFUL Routes
+      resources :graphs, only: [:show]
+    end
+  end
 end

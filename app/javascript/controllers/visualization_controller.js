@@ -17,7 +17,7 @@ export default class extends Controller {
       this.isLoadedTarget.hidden = false
     }
     else {
-      // console.error("No Id was passed")
+      console.error("No Id was passed")
     }
   }
   
