@@ -1,4 +1,4 @@
-# ClaraFinds Test Project
+# ClaraFinds
 
 ## Local Development (Mac OS / Ubuntu)
 
